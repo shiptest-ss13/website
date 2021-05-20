@@ -43,8 +43,9 @@
     /*text-align: center;*/
 }
 
-ul {
+ul.topnav {
     list-style-type: none;
+    margin: 0;
     padding: 0;
     margin: 0;
     position: sticky;
@@ -52,11 +53,11 @@ ul {
     background-color: #333;
 }
   
-li {
+ul.topnav li {
     float: left;
 }
 
-li a {
+ul.topnav li a {
     display: block;
     color: white;
     text-align: center;
@@ -65,8 +66,16 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+ul.topnav li a:hover {
     background-color: #111;
+}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 750px) {
+    .center {width: 100%;}
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
 
 body
