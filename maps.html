@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 		<link rel="stylesheet" type="text/css" href="common.css"></link>
 		<link rel="icon" type="image/png" href="images/shiptest-logo.png"></link>
 		<script src="https://kit.fontawesome.com/cd717a47ab.js" crossorigin="anonymous"></script>
@@ -9,7 +10,6 @@
 		<meta name="author" content="Mark Suckerberg"></meta>
 		<meta name="viewport" content="width=device-width, intial-scale=1"></meta>
 		<meta charset="UTF8"></meta>
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 		<!-- OpenGraph Meta Tags -->
 		<meta property="og:site_name" content="Shiptest">
 		<meta property="og:title" content="Shiptest Map Viewer">
@@ -37,88 +37,36 @@
 			<h1 id="shiptest-13">Maps</h1>
 			<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-			<h2>Dwayne-class Long Range Mining Transport</h2>
-			<div class="mapbox" id="mining"></div>
-			<script>
-					var map = L.map("mining", {
-						attributionControl: false,
-						minZoom: 1,
-						maxZoom: 6,
-						crs: L.CRS.Simple,
-						preferCanvas: true,
-					}).setView([-64, 64], 3);
+			<button type="button" class="collapsible">Dwayne-class Long Range Mining Transport</button>
+			<div class="mapbox" id="Dwayne-classLongRangeMiningTransport"></div>
 
-					L.tileLayer("https://suckerberg.ga/renders/tiles/Dwayne-classLongRangeMiningTransport/tiles/{z}/tile_{x}-{y}.png", {
-						minZoom: 1,
-						maxZoom: 6,
-						maxNativeZoom: 3,
-						continuousWorld: true,
-						tms: false
-					}).addTo(map);
-			</script>
+			<button type="button" class="collapsible">Shetland-class Multipurpose Frigate</button>
+			<div class="mapbox" id="Shetland-classMultipurposeFrigate"></div>
 
-			<h2>Shetland-class Multipurpose Frigate</h2>
-			<div class="mapbox" id="susship"></div>
-			<script>
-					var map = L.map("susship", {
-						attributionControl: false,
-						minZoom: 1,
-						maxZoom: 6,
-						crs: L.CRS.Simple,
-						preferCanvas: true,
-					}).setView([-64, 64], 3);
+			<button type="button" class="collapsible">Boyardee-class Entertainment Vessel</button>
+			<div class="mapbox" id="Boyardee-classEntertainmentVessel"></div>
 
-					L.tileLayer("https://suckerberg.ga/renders/tiles/Shetland-classMultipurposeFrigate/tiles/{z}/tile_{x}-{y}.png", {
-						minZoom: 1,
-						maxZoom: 6,
-						maxNativeZoom: 3,
-						continuousWorld: true,
-						tms: false
-					}).addTo(map);
-			</script>
+			<button type="button" class="collapsible">Kugelblitz-class Experimental Vessel</button>
+			<div class="mapbox" id="Kugelblitz-classExperimentalVessel"></div>
 
-			<h2>Boyardee-class Entertainment Vessel</h2>
-			<div class="mapbox" id="barship"></div>
-			<script>
-					var map = L.map("barship", {
-						attributionControl: false,
-						minZoom: 1,
-						maxZoom: 6,
-						crs: L.CRS.Simple,
-						preferCanvas: true,
-					}).setView([-64, 64], 3);
+			<button type="button" class="collapsible">Box-class Medical Ship</button>
+			<div class="mapbox" id="Box-classMedicalShip"></div>
 
-					L.tileLayer("https://suckerberg.ga/renders/tiles/Boyardee-classEntertainmentVessel/tiles/{z}/tile_{x}-{y}.png", {
-						minZoom: 1,
-						maxZoom: 6,
-						maxNativeZoom: 3,
-						continuousWorld: true,
-						tms: false
-					}).addTo(map);
-			</script>
+			<button type="button" class="collapsible">Meta-class Freighter</button>
+			<div class="mapbox" id="Meta-classFreighter"></div>
 
-			<h2>Kugelblitz-class Experimental Vessel</h2>
-			<div class="mapbox" id="mothship"></div>
-			<script>
-					var map = L.map("mothship", {
-						attributionControl: false,
-						minZoom: 1,
-						maxZoom: 6,
-						crs: L.CRS.Simple,
-						preferCanvas: true,
-					}).setView([-64, 64], 3);
+			<button type="button" class="collapsible">Delta-class Frigate</button>
+			<div class="mapbox" id="Delta-classFrigate"></div>
 
-					L.tileLayer("https://suckerberg.ga/renders/tiles/Kugelblitz-classExperimentalVessel/tiles/{z}/tile_{x}-{y}.png", {
-						minZoom: 1,
-						maxZoom: 6,
-						maxNativeZoom: 3,
-						continuousWorld: true,
-						tms: false
-					}).addTo(map);
-			</script>
+			<button type="button" class="collapsible">Pubby-class Light Carrier</button>
+			<div class="mapbox" id="Pubby-classLightCarrier"></div>
 
-			<small>made with <i class="fas fa-coffee"></i> and <i class="fas fa-heart"></i> by mark suckerberg</small>
+			<button type="button" class="collapsible">Midway-class Tanker</button>
+			<div class="mapbox" id="Midway-classTanker"></div>
 
-		</div>
+			<script src="get_map.js"></script>
+			<script src="collapsible.js"></script>
+
+		</main>
 	</body>
 </html>
