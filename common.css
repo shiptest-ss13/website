@@ -80,6 +80,11 @@ ul.topnav li a:hover {
 	background: #ffffff;
 }
 
+ul.topnav li a.active {
+	color: #ffffff;
+	background: #408a4a;
+}
+
 a {
 	color: #517087;
     text-decoration: none;
@@ -132,4 +137,9 @@ h3
 h4
 {
 	font-size: 14px;
+}
+
+.mapbox {
+    height: 500px;
+    width: 75%;
 }
