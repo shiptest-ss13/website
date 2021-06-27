@@ -3,10 +3,10 @@ var mapElements = document.body.getElementsByClassName("mapbox")
 for (i = 0; i < mapElements.length; i++) {
 	var map = L.map(mapElements[i].id, {
 		attributionControl: false,
-		minZoom: 2,
+		minZoom: 1,
 		maxBounds: [
 			[64, -64],
-			[-256, 256]
+			[-512, 512]
 		],
 		maxBoundsViscosity: 1.0,
 		maxZoom: 6,
@@ -15,8 +15,9 @@ for (i = 0; i < mapElements.length; i++) {
 	}).setView([-64, 64], 3);
 
 	L.tileLayer("https://suckerberg.ga/renders/tiles/" + mapElements[i].id + "/tiles/{z}/tile_{x}-{y}.png", {
-		minZoom: 2,
+		minZoom: 1,
 		maxZoom: 6,
+		minNativeZoom: 2,
 		maxNativeZoom: 3,
 		continuousWorld: true,
 		tms: false
