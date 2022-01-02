@@ -1,5 +1,3 @@
-/* Background animation */
-
 @keyframes animateBackground {
     from {
         background-position: 0 0;
@@ -8,7 +6,6 @@
         background-position: -960px 0;
     }
 }
-
 .layer1,
 .layer2,
 .layer3 {
@@ -20,35 +17,24 @@
     background-repeat: repeat;
     z-index: -1;
 }
-
 .layer1 {
-    background-image: url("images/layer1.png");
+    background-image: url("images/layer1.webp");
     animation: animateBackground 80s linear infinite;
 }
-
 .layer2 {
-    background-image: url("images/layer2.png");
+    background-image: url("images/layer2.webp");
     animation: animateBackground 40s linear infinite;
 }
-
 .layer3 {
-    background-image: url("images/layer3.png");
+    background-image: url("images/layer3.webp");
     animation: animateBackground 20s linear infinite;
 }
-
-.center {
-	margin: 0;
-	min-height: 50%;
-	width: 50%;
-	background-color: #272727;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+.mainbox {
+    background-color: #272727;
     text-align: center;
+    margin: 5% 10%;
+    padding-bottom: 10%;
 }
-
 ul.topnav {
     list-style-type: none;
     margin: 0;
@@ -56,104 +42,93 @@ ul.topnav {
     margin: 0;
     position: sticky;
     overflow: hidden;
-	border-bottom: 2px solid #161616;
-	background: #383838;
+    border-bottom: 2px solid #161616;
+    background: #383838;
 }
-  
 ul.topnav li {
     float: left;
 }
-
 ul.topnav li a {
     display: block;
-    color: #ffffff;
-	text-decoration: none;
+    color: #fff;
+    text-decoration: none;
     font-size: 16px;
-	background: #40628a;
-	border: 1px solid #161616;
-	padding: 1px 4px;
-	margin: 0px 1px;
+    background: #40628a;
+    border: 1px solid #161616;
+    padding: 1px 4px;
+    margin: 0 1px;
 }
-
 ul.topnav li a:hover {
-	color: #40628a;
-	background: #ffffff;
+    color: #40628a;
+    background: #fff;
 }
-
 ul.topnav li a.active {
-	color: #ffffff;
-	background: #408a4a;
+    color: #fff;
+    background: #408a4a;
 }
-
 a {
-	color: #517087;
+    color: #4f9ad2;
     text-decoration: none;
 }
-
 a:hover {
     color: #40628a;
     text-decoration: underline;
 }
-
-ul.topnav li.right {float: right;}
-
-@media screen and (max-width: 750px) {
-    .center {width: 100%;}
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
+ul.topnav li.right {
+    float: right;
 }
-
-body
-{
-	padding: 10px;
-	font-size: 14px;
-	color: #ffffff;
-	line-height: 170%;
-    font-family: Verdana, Geneva, sans-serif;
+@media screen and (max-width:750px) {
+    .mainbox {
+        width: 100%;
+        margin: 0;
+    }
+    ul.topnav li,
+    ul.topnav li.right {
+        float: none;
+    }
 }
-
-h1, h2, h3, h4, h5, h6
-{
-	margin: 0;
-	padding: 16px 0 8px 0;
-	color: #517087;
+body {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 170%;
+    font-family: Verdana,Geneva,sans-serif;
 }
-
-h1
-{
-	font-size: 24px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 16px 0 8px;
+    color: #4f9ad2;
 }
-
-h2
-{
-	font-size: 18px;
+h1 {
+    font-size: 24px;
 }
-
-h3
-{
-	font-size: 16px;
+h2 {
+    font-size: 18px;
 }
-
-h4
-{
-	font-size: 14px;
+h3 {
+    font-size: 16px;
 }
-
+h4 {
+    font-size: 14px;
+}
 .mapbox {
     width: 100%;
     height: 0;
     padding-bottom: 50%;
 }
-
 .leaflet-container {
     background-image: url("images/layer1.png");
     animation: animateBackground 20s linear infinite;
     background-repeat: repeat;
 }
-
 .collapsible {
     background-color: #383838;
-    font-weight: bold;
+    font-weight: 700;
     color: #517087;
     cursor: pointer;
     padding: 18px;
@@ -163,19 +138,28 @@ h4
     outline: none;
     font-size: 18px;
 }
-
 .collapsible:hover {
     background-color: #ccc;
 }
-
-.collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
+ul.simple_list {
+    list-style-type: none;
+    padding-left: 0;
 }
-  
-.collapsible.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+ul.simple_list li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background: #40628a;
+    border: 1px solid #161616;
+    padding: 1px 4px;
+    margin: 0 1px;
+}
+ul.simple_list li a:hover {
+    color: #40628a;
+    background: #fff;
+}
+ul.simple_list li a.active {
+    color: #fff;
+    background: #628a40;
 }

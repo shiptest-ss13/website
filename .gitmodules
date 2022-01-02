@@ -1,0 +1,6 @@
+[submodule "assets/fontawesome"]
+	path = assets/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome
+[submodule "assets/leaflet"]
+	path = assets/leaflet
+	url = https://github.com/Leaflet/Leaflet

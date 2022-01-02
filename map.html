@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="height: 100%; width: 100%; overflow: hidden;" lang="en">
+	<head>
+		<link rel="stylesheet" href="/assets/leaflet/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" />
+		<link rel="stylesheet" type="text/css" href="common.css"></link>
+		<link rel="canonical" href="https://shiptest.net/maps" />
+		<meta name="description" content="A basic map viewer for all of the buyable (and even unbuyable!) ships at Shiptest."></meta>
+		<meta name="keywords" content="Space Station 13, Shiptest"></meta>
+		<meta name="author" content="Mark Suckerberg"></meta>
+		<meta name="viewport" content="width=device-width, intial-scale=1"></meta>
+		<meta charset="UTF8"></meta>
+		<!-- OpenGraph Meta Tags -->
+		<meta property="og:site_name" content="Shiptest">
+		<meta property="og:title" content="Shiptest Map Viewer">
+		<meta property="og:description" content="A basic map viewer for all of the buyable (and even unbuyable!) ships at Shiptest.">
+		<meta property="og:image" content="https://shiptest.net/images/overmap.png">
+
+		<title>Ship Maps</title>
+	</head>
+	<body style="height: 100%; width: 100%; overflow: hidden; padding: 0%; margin: 0%;">
+        	<script src="/assets/leaflet/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="></script>
+		<div id="mapbox" class="mapbox" style="width: auto; height: 100%;"></div>
+        	<script src="load_map.js"></script>
+	</body>
+</html>

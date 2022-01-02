@@ -1,70 +1,36 @@
-var mapElements = document.body.getElementsByClassName("mapbox")
+var data = []
 
-for (i = 0; i < mapElements.length; i++) {
-	var base = L.tileLayer("https://shiptest.ga/new-renders/initial/padded/tiles/" + mapElements[i].id + "/tiles/{z}/tile_{x}-{y}.png", {
-		minZoom: 1,
-		maxZoom: 6,
-		minNativeZoom: 2,
-		maxNativeZoom: 3,
-		continuousWorld: true,
-		tms: false
-	})
+fetch('https://shiptest.net/renders/maps.json')
+  	.then(function (response) {
+    	return response.json();
+  	})
+  	.then(function (result) {
+    	renderMaps(result);
+  	})
+  	.catch(function (err) {
+    	console.log(err);
+  	});
 
-	var areas = L.tileLayer("https://shiptest.ga/new-renders/areas/padded/tiles/" + mapElements[i].id + "/tiles/{z}/tile_{x}-{y}.png", {
-		minZoom: 1,
-		maxZoom: 6,
-		minNativeZoom: 2,
-		maxNativeZoom: 3,
-		continuousWorld: true,
-		tms: false
-	})
+function renderMaps(data) {
+	var mapList = document.createElement('ul');
+	mapList.classList.add("simple_list");
+	for (mapName in data) {
+		var mapNameText = document.createTextNode(mapName);
 
-	var pipenet = L.tileLayer("https://shiptest.ga/new-renders/pipenet/padded/tiles/" + mapElements[i].id + "/tiles/{z}/tile_{x}-{y}.png", {
-		minZoom: 1,
-		maxZoom: 6,
-		minNativeZoom: 2,
-		maxNativeZoom: 3,
-		continuousWorld: true,
-		tms: false
-	})
+		var mapLink = document.createElement('a');
+		mapLink.innerHTML = "Webmap";
+		mapLink.href = "https://shiptest.net/map?map=" + data[mapName]
 
-	var powernet  = L.tileLayer("https://shiptest.ga/new-renders/powernet/padded/tiles/" + mapElements[i].id + "/tiles/{z}/tile_{x}-{y}.png", {
-		minZoom: 1,
-		maxZoom: 6,
-		minNativeZoom: 2,
-		maxNativeZoom: 3,
-		continuousWorld: true,
-		tms: false
-	})
+		var mapLinkFull = document.createElement('a');
+		mapLinkFull.innerHTML = "Full Render";
+		mapLinkFull.href = "https://shiptest.net/renders/initial/padded/" + data[mapName] + ".png"
 
-	var map = L.map(mapElements[i].id, {
-		attributionControl: false,
-		minZoom: 1,
-		maxBounds: [
-			[64, -64],
-			[-512, 512]
-		],
-		maxBoundsViscosity: 1.0,
-		maxZoom: 6,
-		crs: L.CRS.Simple,
-		preferCanvas: true,
-		layers: [base]
-	}).setView([-64, 64], 3);
+		var mapParagraph = document.createElement('li');
+		mapParagraph.appendChild(mapNameText);
+		mapParagraph.appendChild(mapLink);
+		mapParagraph.appendChild(mapLinkFull);
 
-
-	var baseMaps = {
-		"Ship": base,
-		"Areas": areas,
+		mapList.appendChild(mapParagraph);
 	}
-
-	var overlayMaps = {
-		"Pipes": pipenet,
-		"Cables": powernet,
-	}
-
-
-	L.control.layers(baseMaps, overlayMaps).addTo(map)
-
+	document.getElementById("main").appendChild(mapList);
 }
-
-

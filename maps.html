@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 		<link rel="stylesheet" type="text/css" href="common.css"></link>
-		<link rel="icon" type="image/png" href="images/shiptest-logo.png"></link>
-		<script src="https://kit.fontawesome.com/cd717a47ab.js" crossorigin="anonymous"></script>
+		<script src="/assets/fontawesome/js/all.js" data-auto-add-css="false"></script>
+                <link href="/assets/fontawesome/css/svg-with-js.css" rel="stylesheet" />
+		<link rel="canonical" href="https://shiptest.net/maps" />
 		<meta name="description" content="A fork of Space Station 13 centering around ships and exploration."></meta>
 		<meta name="keywords" content="Space Station 13, Shiptest"></meta>
 		<meta name="author" content="Mark Suckerberg"></meta>
@@ -14,7 +14,7 @@
 		<meta property="og:site_name" content="Shiptest">
 		<meta property="og:title" content="Shiptest Map Viewer">
 		<meta property="og:description" content="A basic map viewer.">
-		<meta property="og:image" content="https://shiptest.ga/images/overmap.png">
+		<meta property="og:image" content="https://shiptest.net/images/overmap.png">
 
 		<title>Shiptest Maps</title>
 	</head>
@@ -22,53 +22,22 @@
 		<div class="layer1"></div>
 		<div class="layer2"></div>
 		<div class="layer3"></div>
-		<main style="background-color: #272727;">
+		<main style="background-color: #272727;" id="main" class="mainbox">
 			<ul class="topnav">
-				<li><a href="index.html"><i class="fas fa-home"></i> Home</i></a></li>
-				<li><a href="byond://join.shiptest.ga:41372"><i class="fas fa-rocket"></i> Join</i></a></li>
-				<li><a href="https://shiptest.ga/stats/"><i class="fas fa-chart-line"></i> Stats</i></a></li>
+				<li><a href="/"><i class="fas fa-home"></i> Home</i></a></li>
+				<li><a href="byond://join.shiptest.net:41372"><i class="fas fa-rocket"></i> Join</i></a></li>
+				<li><a href="/stats"><i class="fas fa-chart-line"></i> Stats</i></a></li>
 				<li><a href="https://github.com/shiptest-ss13/Shiptest"><i class="fab fa-github"></i> Github</a></li>
-				<li><a href="https://codedocs.shiptest.ga"><i class="fas fa-book"></i> Codedocs</a></li>
-				<li><a href="https://shiptest.ga/wiki"><i class="fab fa-wikipedia-w"></i> Wiki</a></li>
+				<li><a href="https://codedocs.shiptest.net"><i class="fas fa-book"></i> Codedocs</a></li>
+				<li><a href="/wiki"><i class="fab fa-wikipedia-w"></i> Wiki</a></li>
 				<li><a href="https://hackmd.io/@shiptest"><i class="fas fa-edit"></i> HackMD</a></li>
-				<li><a href="https://status.shiptest.ga"><i class="fas fa-exclamation-circle"></i> Status</i></a></li>
-				<li><a class="active" href="maps.html"><i class="fas fa-map-marked-alt"></i> Maps</i></a></li>
-				<li class="right"><a href="https://discord.com/invite/XKBktpjAbh"><i class="fab fa-discord"></i> Discord</a></li>
+				<li><a href="https://status.shiptest.net"><i class="fas fa-exclamation-circle"></i> Status</i></a></li>
+				<li><a class="active" href="/maps"><i class="fas fa-map-marked-alt"></i> Maps</i></a></li>
+				<li class="right"><a href="/discord"><i class="fab fa-discord"></i> Discord</a></li>
 			</ul>
 
 			<h1 id="shiptest-13">Maps</h1>
-			<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-
-			<button type="button" class="collapsible">Dwayne-class Long Range Mining Transport</button>
-			<div class="mapbox" id="Dwayne-classLongRangeMiningTransport"></div>
-
-			<button type="button" class="collapsible">Shetland-class Multipurpose Frigate</button>
-			<div class="mapbox" id="Shetland-classMultipurposeFrigate"></div>
-
-			<button type="button" class="collapsible">Boyardee-class Entertainment Vessel</button>
-			<div class="mapbox" id="Boyardee-classEntertainmentVessel"></div>
-
-			<button type="button" class="collapsible">Kugelblitz-class Experimental Vessel</button>
-			<div class="mapbox" id="Kugelblitz-classExperimentalVessel"></div>
-
-			<button type="button" class="collapsible">Box-class Medical Ship</button>
-			<div class="mapbox" id="Box-classMedicalShip"></div>
-
-			<button type="button" class="collapsible">Meta-class Freighter</button>
-			<div class="mapbox" id="Meta-classFreighter"></div>
-
-			<button type="button" class="collapsible">Delta-class Frigate</button>
-			<div class="mapbox" id="Delta-classFrigate"></div>
-
-			<button type="button" class="collapsible">Pubby-class Light Carrier</button>
-			<div class="mapbox" id="Pubby-classLightCarrier"></div>
-
-			<button type="button" class="collapsible">Midway-class Tanker</button>
-			<div class="mapbox" id="Midway-classTanker"></div>
-
 			<script src="get_map.js"></script>
-			<script src="collapsible.js"></script>
-
 		</main>
 	</body>
 </html>
