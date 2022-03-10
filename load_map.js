@@ -18,7 +18,7 @@ document.title = mapname;
 var base = L.tileLayer("https://shiptest.net/renders/initial/padded/tiles/" + mapname + "/tiles/{z}/tile_{x}-{y}.png", {
     minZoom: 1,
     maxZoom: 6,
-    minNativeZoom: 2,
+    minNativeZoom: 3,
     maxNativeZoom: 3,
     continuousWorld: true,
     tms: false
@@ -27,7 +27,7 @@ var base = L.tileLayer("https://shiptest.net/renders/initial/padded/tiles/" + ma
 var areas = L.tileLayer("https://shiptest.net/renders/areas/padded/tiles/" + mapname + "/tiles/{z}/tile_{x}-{y}.png", {
     minZoom: 1,
     maxZoom: 6,
-    minNativeZoom: 2,
+    minNativeZoom: 3,
     maxNativeZoom: 3,
     continuousWorld: true,
     tms: false
@@ -36,7 +36,7 @@ var areas = L.tileLayer("https://shiptest.net/renders/areas/padded/tiles/" + map
 var pipenet = L.tileLayer("https://shiptest.net/renders/pipenet/padded/tiles/" + mapname + "/tiles/{z}/tile_{x}-{y}.png", {
     minZoom: 1,
     maxZoom: 6,
-    minNativeZoom: 2,
+    minNativeZoom: 3,
     maxNativeZoom: 3,
     continuousWorld: true,
     tms: false
@@ -45,7 +45,7 @@ var pipenet = L.tileLayer("https://shiptest.net/renders/pipenet/padded/tiles/" +
 var powernet  = L.tileLayer("https://shiptest.net/renders/powernet/padded/tiles/" + mapname + "/tiles/{z}/tile_{x}-{y}.png", {
     minZoom: 1,
     maxZoom: 6,
-    minNativeZoom: 2,
+    minNativeZoom: 3,
     maxNativeZoom: 3,
     continuousWorld: true,
     tms: false
@@ -56,7 +56,7 @@ var map = L.map("mapbox", {
     minZoom: 1,
     maxBounds: [
         [64, -64],
-        [-512, 512]
+        [-1024, 1024]
     ],
     maxBoundsViscosity: 1.0,
     maxZoom: 6,
