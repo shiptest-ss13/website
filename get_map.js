@@ -19,11 +19,11 @@ function renderMaps(data) {
 
 		var mapLink = document.createElement('a');
 		mapLink.innerHTML = "Webmap";
-		mapLink.href = "https://shiptest.net/map?map=" + data[mapName]
+		mapLink.href = "https://shiptest.net/map?map=" + data[mapName]["short_name"]
 
 		var mapLinkFull = document.createElement('a');
 		mapLinkFull.innerHTML = "Full Render";
-		mapLinkFull.href = "https://shiptest.net/renders/initial/padded/" + data[mapName] + ".png"
+		mapLinkFull.href = "https://shiptest.net/renders/initial/padded/" + data[mapName]["short_name"] + ".png"
 
 		var mapParagraph = document.createElement('li');
 		mapParagraph.appendChild(mapNameText);
