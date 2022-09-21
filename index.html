@@ -14,10 +14,34 @@
 		<!-- OpenGraph Meta Tags -->
 		<meta property="og:site_name" content="Shiptest">
 		<meta property="og:title" content="Shiptest Homepage">
-		<meta property="og:description" content="A fork of Space Station 13 centering around ships and exploration.">
+		<meta property="og:description" content="A fork of Space Station 13 centering around ships and exploration built open-source on the BYOND game engine. Join today!">
 		<meta property="og:image" content="https://shiptest.net/images/overmap.webp">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://shiptest.net">
 
-		<title>Shiptest</title>
+		<title>Shiptest - Home</title>
+
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"url": "https://shiptest.net",
+			"logo": "https://shiptest.net/images/shiptest_logo.svg"
+		}
+		</script>
+		
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"url": "https://shiptest.net",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://shiptest.net/wiki/index.php?search={search_term_string}",
+				"query-input":"required name=search_term_string"
+			}
+		}
+		</script>
 	</head>
 	<body>
 		<div class="layer1"></div>
@@ -30,7 +54,7 @@
 				<li><a href="stats"><i class="fas fa-chart-line"></i> Stats</i></a></li>
 				<li><a href="https://github.com/shiptest-ss13/Shiptest"><i class="fab fa-github"></i> Github</a></li>
 				<li><a href="https://codedocs.shiptest.net"><i class="fas fa-book"></i> Codedocs</a></li>
-				<li><a href="wiki"><i class="fab fa-wikipedia-w"></i> Wiki</a></li>
+				<li><a href="wiki/Main_Page"><i class="fab fa-wikipedia-w"></i> Wiki</a></li>
 				<li><a href="https://forums.shiptest.net"><i class="fas fa-comment-alt"></i> Forum</a></li>
 				<li><a href="https://hackmd.io/@shiptest"><i class="fas fa-edit"></i> HackMD</a></li>
 				<li><a href="https://status.shiptest.net"><i class="fas fa-exclamation-circle"></i> Status</i></a></li>
@@ -38,8 +62,11 @@
 				<li class="right"><a href="discord"><i class="fab fa-discord"></i> Discord</a></li>
 			</ul>
 			<h1 id="shiptest-13">Shiptest 13</h1>
-			<p>Shiptest 13 is a fork of Space Station 13 (specifically /tg/station-whitesands code) centering around exploration of the universe. Gameplay takes place on ships, which can be flown in an &quot;overmap&quot; which represents areas you can travel in solar systems and beyond. (Learn more about the overmap <a href="https://hackmd.io/@shiptest/overmap">here, on our design doc!</a>)</p>
+			<p>Shiptest 13 is a fork of Space Station 13 (specifically /tg/station-whitesands code) centering around exploration of the universe. Gameplay takes place on ships, which can be flown in an &quot;overmap&quot; which represents areas you can travel in solar systems and beyond. (Learn more about the overmap <a href="https://shiptest.net/wiki/Guide_to_the_Overmap">here, on our wiki!</a>)</p>
 			<p>Be sure to join our <a href="discord">discord!</a></p>
+			<h2>Progress Reports</h2>
+			<div class="progress-reports" id="progress-reports"></div>
+			<script src="get_progress_report.js"></script>
 			<small>made with <i class="fas fa-coffee"></i> and <i class="fas fa-heart"></i> by mark suckerberg</small>
 		</main>
 	</body>
