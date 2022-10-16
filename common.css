@@ -1,3 +1,4 @@
+/* Background animation - Credit to AffectedArc07 from the SS13 WebMap https://affectedarc07.github.io/SS13WebMap/ */
 @keyframes animateBackground {
     from {
         background-position: 0 0;
@@ -29,6 +30,9 @@
     background-image: url("images/layer3.webp");
     animation: animateBackground 20s linear infinite;
 }
+
+
+
 .mainbox {
     background-color: #272727;
     text-align: center;
